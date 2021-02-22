@@ -185,6 +185,8 @@ if __name__ == '__main__':
 
 	# Init card reader driver
 	sl = init_reader(opts)
+	if (sl == None):
+		exit(1)
 
 	# Create command layer
 	scc = SimCardCommands(transport=sl)
