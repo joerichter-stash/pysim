@@ -552,7 +552,7 @@ class DF_GSM(CardDF):
           EF_IMSI(),
           TransparentEF('5f20', None, 'EF.Kc', 'Ciphering key Kc'),
           EF_PLMNsel(),
-          TransparentEF('6f31', None, 'EF.HPPLMN', 'Higher Priprity PLMN search period'),
+          TransparentEF('6f31', None, 'EF.HPPLMN', 'Higher Priority PLMN search period'),
           # ACMmax
           EF_ServiceTable('6f37', None, 'EF.SST', 'SIM service table', table=EF_SST_map, size={2,16}),
           CyclicEF('6f39', None, 'EF.ACM', 'Accumulated call meter', rec_len={4,3}),

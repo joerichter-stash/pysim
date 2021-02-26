@@ -355,7 +355,7 @@ class ADF_USIM(CardADF):
           EF_Keys('6f09', 0x09, 'EF.KeysPS', desc='Ciphering and Integrity Keys for PS domain'),
           EF_xPLMNwAcT('6f60', 0x0a, 'EF.PLMNwAcT',
                        'User controlled PLMN Selector with Access Technology'),
-          TransparentEF('6f31', 0x12, 'EF.HPPLMN', 'Higher Priprity PLMN search period'),
+          TransparentEF('6f31', 0x12, 'EF.HPPLMN', 'Higher Priority PLMN search period'),
           # EF.ACMmax
           EF_UST(),
           CyclicEF('6f39', None, 'EF.ACM', 'Accumulated call meter', rec_len={3,3}),
