@@ -575,6 +575,13 @@ class RuntimeState(object):
            or the underlying profile."""
         app = self.get_application()
         if app:
+            # The application either comes with its own interpret_sw
+            # method or we will use the interpret_sw method from the
+            # card profile.
+            if hasattr(app, "interpret_sw"):
+                return app.interpret_sw(sw)
+            else:
+                return self.profile.interpret_sw(sw)
             return app.interpret_sw(sw)
         else:
             return self.profile.interpret_sw(sw)
